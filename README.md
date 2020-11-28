@@ -4,7 +4,7 @@
 This is a separated independent Serial Port Assitant based on QT and VS using QT muti thread. The modules were optimized compared to ordinary Serial Port write and read. 
 
 #### Features:
- - muti Serial widgets create and read concurrently
+ - muti serial widgets create and read concurrently
  - serial auto detect
  - port baudrate bytesize parity stopbits settings
  - basic receive data synchronously or asynchronously (ascii and hex)
@@ -25,7 +25,7 @@ This project is programmed under VS2015 and QT5.12.9. If there is a QT version m
 	> If Solution 1 doesnot work, try the following:  
 	> * Solution 2. Right click the project solution, change solution's QT version        
 	> * Solution 3. Find file with Suffix vcxproj.user : then modify QTDIR macro  
-	** Modification example: \<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
+	*Modification example: \<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
 
 #### Specifications:
 - Class RWserial  (rwSerial.h):
@@ -60,11 +60,13 @@ Serial sub widgets and other sub widgets can communicate through the bridge, the
 13. 记录不同level数据日志              
 14. 处理错误
 
-**如果qt版本不匹配** 
+**如果qt版本不匹配**   
 右键项目属性，找到QTproject Setting，Change Qt installation to yourself version
 > 如果上述解决方案无效，尝试以下：
 > * 解决方案2. 打开项目，右键项目解决方案，change solution's qt version
 > * 解决方案3. 找到.vcxproj.user：修改QTDIR宏
-	**修改示例：\<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
-		
+	*修改示例：\<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
+	
+
+#### Demo:	
 ![QT SerialPort Assistant GIF](https://user-images.githubusercontent.com/70003795/100515716-166ec100-31b9-11eb-922d-9b6790b5b4f8.gif)
