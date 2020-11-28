@@ -44,7 +44,6 @@ Serial sub widgets and other sub widgets can communicate through the bridge, the
 **说明：**   
 一个独立串口助手，基于QT5.12.9和VS2015，使用QT多线程。
 
----
 **功能：** 
 1. 同时创建读写多个串口      
 2. 串口热插拔自动检测（无法检测串口断电）      
@@ -61,7 +60,6 @@ Serial sub widgets and other sub widgets can communicate through the bridge, the
 13. 记录不同level数据日志              
 14. 处理错误
 
----
 **如果qt版本不匹配** 
 右键项目属性，找到QTproject Setting，Change Qt installation to yourself version
 > 如果上述解决方案无效，尝试以下：
