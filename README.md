@@ -22,20 +22,20 @@ This is a separated independent Serial Port Assitant based on QT and VS using QT
 #### If QT version mismatch
 This project is programmed under VS2015 and QT5.12.9. If there is a QT version mismatch, should include your own QT directory
 - Solution 1. Right click the project property to find qtproject setting, change QT installation to yourself version
-> If Solution 1 doesnot work, try the following:  
-> * Solution 2. Right click the project solution, change solution's QT version        
-> * Solution 3. Find file with Suffix vcxproj.user : then modify QTDIR macro            
->Modification example: <QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64</QTDIR>
+	> If Solution 1 doesnot work, try the following:  
+	> * Solution 2. Right click the project solution, change solution's QT version        
+	> * Solution 3. Find file with Suffix vcxproj.user : then modify QTDIR macro  
+	** Modification example: \<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
 
 #### Specifications:
 - Class RWserial  (rwSerial.h):
->  The write and read classes are in worker thread, including receiving data synchronously and asynchronously, and sending data asynchronously over the selected serial port. It commucates with the main-GUI thread through Singals and Slots. Thus it doesnot block the main-GUI Interface. 
+	>  The write and read classes are in worker thread, including receiving data synchronously and asynchronously, and sending data asynchronously over the selected serial port. It commucates with the main-GUI thread through Singals and Slots. Thus it doesnot block the main-GUI Interface. 
 - Class ChildWidget (ChildWidget.h):
->  Each child Serial widget are independent to each other. The gui handling fuctions are in the same main-GUI thread, while the write and read fuctions of different serial ports are in different worker threads. Thus muti serial widgets can be created and read concurrently.
+	>  Each child Serial widget are independent to each other. The gui handling fuctions are in the same main-GUI thread, while the write and read fuctions of different serial ports are in different worker threads. Thus muti serial widgets can be created and read concurrently.
 - Class Log(Global.h):
->  Simple log written class with different log levels using singleton pattern. 
+	>  Simple log written class with different log levels using singleton pattern. 
 - Class QtSerialPort(QtSerialPort.h):
->  The main widget.
+	>  The main widget.
 
 #### Design idea: 
 Serial sub widgets and other sub widgets can communicate through the bridge, the main widget. In a sub widget, interface class and work class handling are separated. 
@@ -63,10 +63,10 @@ Serial sub widgets and other sub widgets can communicate through the bridge, the
 
 ---
 **如果qt版本不匹配** 
-- 解决方案1. 右键项目属性，找到QTproject Setting，Change Qt installation to yourself version
-> 如果解决方案1无效，尝试以下：
+右键项目属性，找到QTproject Setting，Change Qt installation to yourself version
+> 如果上述解决方案无效，尝试以下：
 > * 解决方案2. 打开项目，右键项目解决方案，change solution's qt version
 > * 解决方案3. 找到.vcxproj.user：修改QTDIR宏
-> 修改示例：<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64</QTDIR>
+	**修改示例：\<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
 		
 ![QT SerialPort Assistant GIF](https://user-images.githubusercontent.com/70003795/100515716-166ec100-31b9-11eb-922d-9b6790b5b4f8.gif)
