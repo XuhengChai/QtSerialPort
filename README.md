@@ -1,7 +1,7 @@
 # QtSerialPort
 
 #### Description:
-This is a separated independent Serial Port Assitant based on QT and VS using QT muti thread. The modules have been largely optimized compared to ordinary Serial Port write and read. 
+This is a separated independent Serial Port Assitant based on QT and VS using QT muti thread. The modules were optimized compared to ordinary Serial Port write and read. 
 
 #### Features:
  - muti Serial widgets create and read concurrently
