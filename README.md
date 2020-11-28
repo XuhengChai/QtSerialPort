@@ -64,7 +64,7 @@ Serial sub widgets and other sub widgets can communicate through the bridge, the
 右键项目属性，找到QTproject Setting，Change Qt installation to yourself version
 > 如果上述解决方案无效，尝试以下：
 > * 解决方案2. 打开项目，右键项目解决方案，change solution's qt version
-> * 解决方案3. 找到.vcxproj.user：修改QTDIR宏
+> * 解决方案3. 找到.vcxproj.user：修改QTDIR宏   
 	*修改示例：\<QTDIR>D:\Programs\Qt\5.12.9\msvc2015_64\</QTDIR>
 	
 
